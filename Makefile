@@ -3,7 +3,7 @@ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
 machine := $(shell sh -c "$(CC) -dumpmachine || echo unknown")
 
 # Specify BACKEND=V4L2 or BACKEND=LIBUVC to build a specific backend
-BACKEND := V4L2
+BACKEND := LIBUVC
 
 ifeq ($(uname_S),Darwin)
 # OSX defaults to libuvc instead of V4L
