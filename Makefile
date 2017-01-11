@@ -57,15 +57,13 @@ EXAMPLES := $(addprefix bin/, $(notdir $(basename $(EXAMPLES))))
 all: $(EXAMPLES)
 
 install: lib/librealsense.so
-	install -m755 -d /usr/local/include/librealsense
-	cp -r include/librealsense/* /usr/local/include/librealsense
-	cp lib/librealsense.so /usr/local/lib
-	ldconfig
+	install -d $(DESTDIR)/usr/include/librealsense $(DESTDIR)/usr/lib
+	install -m644 -t $(DESTDIR)/usr/include/librealsense include/librealsense/*
+	install -m644 -t $(DESTDIR)/usr/lib lib/librealsense.so
 
 uninstall:
-	rm -rf /usr/local/include/librealsense
-	rm /usr/local/lib/librealsense.so
-	ldconfig
+	rm -rf $(DESTDIR)/usr/include/librealsense
+	rm $(DESTDIR)/usr/lib/librealsense.so
 
 clean:
 	rm -rf obj

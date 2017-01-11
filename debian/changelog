@@ -1,0 +1,7 @@
+aevena-librealsense (1.0-1) unstable; urgency=low
+
+  * Customized slightly for Aevena, as follows.
+  * Build for LibUVC backend by default.
+  * Reset R200 firmware on exit from any program.
+
+ -- Eric Mulvaney <eric.mulvaney@aevena.com>  Tue, 10 Jan 2017 20:35:02 +0000

@@ -1,0 +1,13 @@
+Source: aevena-librealsense
+Section: misc
+Priority: extra
+Maintainer: Eric Mulvaney <eric.mulvaney@aevena.com>
+Build-Depends: debhelper (>= 8.0.0), libglfw3-dev, libusb-1.0-0-dev, pkg-config
+Standards-Version: 3.9.4
+Vcs-Git: git://github.com/Aevena/librealsense.git
+Vcs-Browser: https://github.com/Aevena/librealsense
+
+Package: aevena-librealsense
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Aevena's build of Intel's Realsense library
